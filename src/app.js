@@ -7,8 +7,8 @@ app.use(express.json());
 // debug tasks up to 8 have NO errors in the test, only in the code below here.
 
 // debug 1
-app.get("/helloworld", (_, res) => {
-  res.status(200).json("Hello World");
+app.get("/hello", (_, res) => {
+  res.status(200).json("Hello World!");
 });
 
 // debug 2
