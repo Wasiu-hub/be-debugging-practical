@@ -17,8 +17,8 @@ app.delete("/goodbye", (_, res) => {
 });
 
 // debug 3(a) and 3(b)
-app.post("/pokemon", (_, res) => {
-  res.status(200).json("Pikachu");
+app.post("/pokemon", (req, res) => {
+  res.status(201).json(req.body.pokemon);
 });
 
 // debug 4

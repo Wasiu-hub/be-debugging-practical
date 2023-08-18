@@ -16,7 +16,7 @@ describe("debugging", () => {
     expect(status).to.equal(204);
   });
 
-  xit("debug 3(a)", async () => {
+  it("debug 3(a)", async () => {
     const { status, body } = await request(app)
       .post("/pokemon")
       .send({ pokemon: "Pikachu" });
@@ -25,7 +25,7 @@ describe("debugging", () => {
     expect(body).to.equal("Pikachu");
   });
 
-  xit("debug 3(b)", async () => {
+  it("debug 3(b)", async () => {
     const { status, body } = await request(app)
       .post("/pokemon")
       .send({ pokemon: "Squirtle" });
