@@ -12,7 +12,7 @@ app.get("/hello", (_, res) => {
 });
 
 // debug 2
-app.get("/goodbye", (_, res) => {
+app.delete("/goodbye", (_, res) => {
   res.sendStatus(204);
 });
 

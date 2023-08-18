@@ -10,7 +10,7 @@ describe("debugging", () => {
     expect(body).to.equal("Hello World!");
   });
 
-  xit("debug 2", async () => {
+  it("debug 2", async () => {
     const { status } = await request(app).delete("/goodbye").send();
 
     expect(status).to.equal(204);
