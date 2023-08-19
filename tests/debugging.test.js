@@ -34,14 +34,14 @@ describe("debugging", () => {
     expect(body).to.equal("Squirtle");
   });
 
-  xit("debug 4", async () => {
+  it("debug 4", async () => {
     const { status, body } = await request(app).get("/pokemon").send();
 
     expect(status).to.equal(200);
     expect(body).to.equal("Catch them all!");
   });
 
-  xit("debug 5", async () => {
+  it("debug 5", async () => {
     const { status } = await request(app).delete("/pokemon").send();
 
     expect(status).to.equal(204);

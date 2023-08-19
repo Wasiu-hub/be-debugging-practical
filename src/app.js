@@ -23,12 +23,12 @@ app.post("/pokemon", (req, res) => {
 
 // debug 4
 app.get("/pokemon", (_, res) => {
-  res.sendStatus(200).json("Catch them all!");
+  res.status(200).json("Catch them all!");
 });
 
 // debug 5
 app.delete("/pokemon", (_, res) => {
-  res.status(204);
+  res.sendStatus(204);
 });
 
 // debug 6
