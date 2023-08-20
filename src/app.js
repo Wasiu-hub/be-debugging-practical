@@ -33,13 +33,14 @@ app.delete("/pokemon", (_, res) => {
 
 // debug 6
 app.patch("/greeting/:forename/:surname", (req, res) => {
-  const { forename, surname, age } = req.params;
+  const { forename, surname } = req.params;
+  const { age } = req.body;
   res.status(200).json(`Happy ${age}th birthday, ${forename} ${surname}!`);
 });
 
 // debug 7
 app.get("/pokemon/choose", (req, res) => {
-  const { name } = req.params;
+  const { name } = req.query;
 
   res.status(200).json(`${name}, I choose you!`);
 });

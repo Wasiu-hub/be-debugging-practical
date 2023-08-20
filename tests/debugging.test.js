@@ -47,7 +47,7 @@ describe("debugging", () => {
     expect(status).to.equal(204);
   });
 
-  xit("debug 6", async () => {
+  it("debug 6", async () => {
     const { status, body } = await request(app)
       .patch("/greeting/Bilbo/Baggins")
       .send({ age: 111 });
@@ -56,7 +56,7 @@ describe("debugging", () => {
     expect(body).to.equal("Happy 111th birthday, Bilbo Baggins!");
   });
 
-  xit("debug 7", async () => {
+  it("debug 7", async () => {
     const { status, body } = await request(app)
       .get("/pokemon/choose?name=Pikachu")
       .send();
