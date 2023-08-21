@@ -65,14 +65,14 @@ describe("debugging", () => {
     expect(body).to.equal("Pikachu, I choose you!");
   });
 
-  xit("debug 8", async () => {
+  it("debug 8", async () => {
     const { status } = await request(app).get("/albums");
 
     expect(status).to.equal(200);
   });
 
-  xit("debug 9", async () => {
-    const { status } = await request(app).get("/login");
+  it("debug 9", async () => {
+    const { status, body, username } = await request(app).get("/login");
 
     expect(status).to.equal(200);
     expect(body).to.equal(`Welcome ${username}`);

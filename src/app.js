@@ -46,7 +46,7 @@ app.get("/pokemon/choose", (req, res) => {
 });
 
 // debug 8
-app.get("albums", (_, res) => {
+app.get("/albums", (_, res) => {
   res.status(200).json("Albums");
 });
 
