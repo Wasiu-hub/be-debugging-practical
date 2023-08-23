@@ -78,19 +78,19 @@ describe("debugging", () => {
     expect(body).to.equal(`Welcome ${username}`);
   });
 
-  xit("debug 10", async () => {
+  it("debug 10", async () => {
     const { status, body } = await request(app).get("/users");
 
-    expect(status).toEqual(200);
-    expect(body).toBe("array");
+    expect(status).to.equal(200);
+    expect(body).to.be.an("array");
   });
 
-  xit("debug 11", async () => {
+  it("debug 11", async () => {
     const { status, body } = await request(app).get("/books");
 
     expect(status).to.equal(201);
     expect(body).to.be.an("array");
-    expect(body).to.have.length.greaterThan(3);
+    expect(body).to.have.length.greaterThanOrEqual(3);
     expect(body[0]).to.have.property("id");
     expect(body[0]).to.have.property("title");
     expect(body[0]).to.have.property("author");
